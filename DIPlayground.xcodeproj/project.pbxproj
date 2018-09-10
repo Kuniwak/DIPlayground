@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2475E44EE1DDFA4AAEABAA9E /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E2300A68D7A63F07366A /* Shared.swift */; };
+		2475E516568A11318AED4D04 /* MinimalCakePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E3D4AB5C01C5756E9130 /* MinimalCakePattern.swift */; };
+		2475E5BC78E4E6CAE16379BC /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475ECA0534158E3FF11CADC /* DIContainer.swift */; };
+		2475E89BB9520449ABFFC3C8 /* ConstructorInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475EBE87F58A68C7512C50D /* ConstructorInjection.swift */; };
+		629A8254214632F3006C21F6 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629A8253214632F3006C21F6 /* Swinject.framework */; };
 		62DFC2B92146246300109E0E /* DIPlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DFC2AF2146246300109E0E /* DIPlayground.framework */; };
 		62DFC2BE2146246300109E0E /* DIPlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DFC2BD2146246300109E0E /* DIPlaygroundTests.swift */; };
 		62DFC2C02146246300109E0E /* DIPlayground.h in Headers */ = {isa = PBXBuildFile; fileRef = 62DFC2B22146246300109E0E /* DIPlayground.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +28,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2475E2300A68D7A63F07366A /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		2475E3D4AB5C01C5756E9130 /* MinimalCakePattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinimalCakePattern.swift; sourceTree = "<group>"; };
+		2475EBE87F58A68C7512C50D /* ConstructorInjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstructorInjection.swift; sourceTree = "<group>"; };
+		2475ECA0534158E3FF11CADC /* DIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		629A8253214632F3006C21F6 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		62DFC2AF2146246300109E0E /* DIPlayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DIPlayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DFC2B22146246300109E0E /* DIPlayground.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DIPlayground.h; sourceTree = "<group>"; };
 		62DFC2B32146246300109E0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				629A8254214632F3006C21F6 /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,12 +61,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		629A8252214632F2006C21F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				629A8253214632F3006C21F6 /* Swinject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		62DFC2A52146246300109E0E = {
 			isa = PBXGroup;
 			children = (
 				62DFC2B12146246300109E0E /* DIPlayground */,
 				62DFC2BC2146246300109E0E /* DIPlaygroundTests */,
 				62DFC2B02146246300109E0E /* Products */,
+				629A8252214632F2006C21F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +93,10 @@
 			children = (
 				62DFC2B22146246300109E0E /* DIPlayground.h */,
 				62DFC2B32146246300109E0E /* Info.plist */,
+				2475E3D4AB5C01C5756E9130 /* MinimalCakePattern.swift */,
+				2475E2300A68D7A63F07366A /* Shared.swift */,
+				2475EBE87F58A68C7512C50D /* ConstructorInjection.swift */,
+				2475ECA0534158E3FF11CADC /* DIContainer.swift */,
 			);
 			path = DIPlayground;
 			sourceTree = "<group>";
@@ -108,6 +132,7 @@
 				62DFC2AB2146246300109E0E /* Sources */,
 				62DFC2AC2146246300109E0E /* Frameworks */,
 				62DFC2AD2146246300109E0E /* Resources */,
+				629A825521463315006C21F6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -189,11 +214,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		629A825521463315006C21F6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Swinject.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		62DFC2AB2146246300109E0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2475E516568A11318AED4D04 /* MinimalCakePattern.swift in Sources */,
+				2475E44EE1DDFA4AAEABAA9E /* Shared.swift in Sources */,
+				2475E89BB9520449ABFFC3C8 /* ConstructorInjection.swift in Sources */,
+				2475E5BC78E4E6CAE16379BC /* DIContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +398,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DIPlayground/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -371,6 +426,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DIPlayground/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
